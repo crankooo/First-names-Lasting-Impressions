@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive experience exploring name-based assumptions and biases">
+  <title>First Name, Lasting Impressions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="masthead">
+    <h3>Ideas</h3>
+  </header>
+  
+  <!-- Title/Introduction Section -->
+  <section class="scroll-section" id="title-section">
+    <div class="intro-sequence">
+      <div class="intro-quote" id="intro-quote">
+        <p class="quote">"Implicit bias is a kind of distorting lens that's a product of both the architecture of our brain and the disparities in our society."</p>
+        <p class="attribution">— Jennifer L. Eberhardt, Professor at Stanford University & Expert on Racial Bias</p>
+      </div>
+      
+      <div class="title-container" id="main-title">
+        <h1 class="big-title">
+          Welcome to<br>
+          <span class="project-title">First Names, Lasting Impressions</span>
+        </h1>
+        <h2 class="sub-title">An interactive look at name-based assumptions</h2>
+        <div class="byline">By Namira Haris and Marian Siljeholm</div>
+      </div>
+      
+      <div id="name-overlay"></div>
+      <div class="scroll-down-button"></div>
+    </div>
+  </section>
+      
+  <!-- Instructions Section -->
+  <section class="scroll-section" id="instructions-section">
+    <div class="instructions-container">
+      <h2 class="instructions-title animated-element">Take a Closer Look</h2>
+      <p class="instructions-text animated-element">
+        You'll be presented with <span class="highlight">10 names</span> and a list of occupations.
+        Your task is to <span class="highlight">match each name to a profession.</span>
+        After you've made your choices, we'll share some reflections to help uncover the subtle, often invisible factors <span class="highlight">that shape the way we see others.</span>
+      </p>
+      <p class="instructions-note animated-element">
+        It's a chance to pause, reflect, and grow more aware — together.
+      </p>
+      <button id="start-button" class="animated-element">Take me to the experience</button>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="scroll-section" id="quiz-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="carousel-track"></div>
+    </div>
+  </section>
+
+  <!-- Results Landing Page Section -->
+  <section class="scroll-section" id="results-landing-section">
+    <div class="results-container">
+      <div class="completion-badge">
+        <svg viewBox="0 0 24 24" width="40" height="40" stroke="#CE5CEA" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      
+      <h2 class="results-title">Experience Complete</h2>
+      
+      <p class="results-message">
+        Thank you for exploring how names shape our perceptions. The biases we carry—often 
+        unconsciously—can have profound impacts on real lives and opportunities.
+        <span class="highlight-text">Every name tells a story. Every assumption reveals something about us.</span>
+      </p>
+      
+      <div class="results-stats">
+        <div class="stat-item">
+          <span class="stat-number">76%</span>
+          <span class="stat-label">of people show some form of name bias in hiring decisions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">2.9×</span>
+          <span class="stat-label">more callbacks for resumes with white-sounding names</span>
+        </div>
+      </div>
+      
+      <p class="action-prompt">Where would you like to go next?</p>
+      
+      <div class="results-cta-container">
+        <a href="#share-section" class="cta-button">
+          <div class="cta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4"/><path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/></svg>
+          </div>
+          <div class="cta-content">
+            <h3>Share Your Story</h3>
+            <p>Add your personal experience with name bias</p>
+          </div>
+        </a>
+        
+        <a href="#resources-section" class="cta-button">
+          <div class="cta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div class="cta-content">
+            <h3>Learn More</h3>
+            <p>Explore resources about name bias and its impact</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="reflection-prompt">
+        <p>Take a moment to reflect: How has this experience changed your perspective?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Section -->
+  <section class="scroll-section" id="share-section">
+    <div class="share-container">
+      <!-- Stories From Others -->
+      <div class="quotes-container">
+        <h3>Stories From Others</h3>
+        
+        <div class="quote-card">
+          <p class="quote-text">"When people saw my resume with my full name, Mohamed, I received far fewer callbacks than when I used 'Mo' instead. Same qualifications, same experience—different response."</p>
+          <p class="quote-author">— Mohamed K., Software Engineer</p>
+        </div>
+        
+        <div class="quote-card">
+          <p class="quote-text">"As a teacher with a traditional Chinese name, parents sometimes questioned my English proficiency before even meeting me. Once they saw me in action, those concerns disappeared, but that initial hesitation is something my colleagues with Western names don't face."</p>
+          <p class="quote-author">— Lin W., Elementary School Teacher</p>
+        </div>
+      </div>
+      
+      <!-- Share Form -->
+      <div class="share-form-container">
+        <h2 class="share-title">Share Your Experience</h2>
+        <p class="share-description">
+          Have you ever faced assumptions or bias based on your name? 
+          Your story matters. By sharing your experience, you contribute to a deeper understanding 
+          of how name bias impacts real people every day.
+        </p>
+        
+        <form id="experience-form" class="share-form">
+          <div class="form-group">
+            <label for="name">Your Name (Optional)</label>
+            <input type="text" id="name" name="name" placeholder="Anonymous responses welcome">
+          </div>
+          
+          <div class="form-group">
+            <label for="profession">Your Profession</label>
+            <input type="text" id="profession" name="profession" placeholder="Your field or role">
+          </div>
+          
+          <div class="form-group">
+            <label for="experience">Your Experience with Name Bias</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Share how your name has influenced others' assumptions or treatment..."></textarea>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="permission" name="permission">
+            <label for="permission">I give permission for my story to be shared anonymously as part of this project</label>
+          </div>
+          
+          <button type="submit" class="submit-button">Share My Story</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="scroll-section" id="resources-section">
+    <div class="resources-container">
+      <h2 class="resources-title">Further Resources</h2>
+      <p class="resources-description">
+        Interested in learning more about name bias and its impacts? Explore these resources to deepen your understanding.
+      </p>
+      
+      <div class="resources-grid">
+        <!-- Foundational Studies -->
+        <div class="resource-card">
+          <h3>Foundational Studies</h3>
+          <ul>
+            <li><a href="https://www.aeaweb.org/articles?id=10.1257/0002828042002561" target="_blank">Are Emily and Greg More Employable than Lakisha and Jamal?</a> - AEA</li>
+            <li><a href="https://www.pnas.org/content/114/41/10870" target="_blank">Ethnic Discrimination in Hiring Decisions</a> - PNAS</li>
+            <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0003122416668154" target="_blank">Whitened Résumés: Race and Self-Presentation in the Labor Market</a> - ASR</li>
+          </ul>
+        </div>
+        
+        <!-- Interactive Resources -->
+        <div class="resource-card">
+          <h3>Interactive Resources</h3>
+          <ul>
+            <li><a href="https://changethewallpaper.com/book" target="_blank">"Change the Wallpaper" – Interactive Book</a></li>
+            <li><a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">Harvard Implicit Association Test (IAT)</a></li>
+            <li><a href="https://www.eeoc.gov/" target="_blank">Equal Employment Opportunity Commission</a></li>
+          </ul>
+        </div>
+        
+        <!-- Books & Articles -->
+        <div class="resource-card">
+          <h3>Books & Articles</h3>
+          <ul>
+            <li><a href="https://www.penguinrandomhouse.com/books/185986/whistling-vivaldi-by-claude-m-steele/" target="_blank">Whistling Vivaldi</a> - by Claude M. Steele</li>
+            <li><a href="https://www.ibramxkendi.com/how-to-be-an-antiracist" target="_blank">How to Be an Antiracist</a> - by Ibram X. Kendi</li>
+            <li><a href="https://www.theatlantic.com/business/archive/2016/10/privilege-helps-men-not-women-get-lucrative-jobs/504497/" target="_blank">The Privilege of Having a Common Name</a> - The Atlantic</li>
+          </ul>
+        </div>
+        
+        <!-- Media & Personal Stories -->
+        <div class="resource-card">
+          <h3>Media & Personal Stories</h3>
+          <ul>
+            <li><a href="https://www.npr.org/sections/codeswitch/2017/02/23/516823230/asian-last-names-lead-to-fewer-job-interviews-still" target="_blank">Asian Last Names Lead to Fewer Job Interviews</a> - NPR</li>
+            <li><a href="https://www.ted.com/talks/jamila_lyiscott_3_ways_to_speak_english" target="_blank">3 Ways to Speak English</a> - TED Talk by Jamila Lyiscott</li>
+            <li><a href="https://www.youtube.com/watch?v=QRZPw-9sJtQ" target="_blank">What's in a Name</a> - YouTube</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kevin's Story Popup -->
+  <div id="kevin-story-container" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; overflow-y:auto; padding: 50px 20px;">
+    <div style="max-width:800px; margin:20px auto; background:#191923; padding:30px; border-radius:10px; color:white; position:relative; border:1px solid #CE5CEA; font-family:'BentonSansCondReg', Arial, sans-serif;">
+      
+      <!-- Close Button -->
+      <button onclick="closeKevinStory()" style="position:absolute; top:10px; right:10px; background:#CE5CEA; color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:18px;">&times;</button>
+      
+      <h3 style="font-family:'Miller', serif; font-size:22px;">Attribution: Kevin John McCarthy, LICSW</h3>
+      <h4 style="color:#b8b8ff; font-size:16px;">Clinical Social Worker and Social Justice Advocate</h4>
+      
+      <div style="margin-top:20px; line-height:1.6; color:#e0e0e0;">
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">My name is Kevin John McCarthy, and the reason why you're hearing my story starts back in the fall of 1973. I was a senior in high school deciding on where I would attend university. When I told my college advisor my dream was to go to Stanford, he told me I was high. I knew then I had to give it a shot. So my list of universities read: Stanford, Brown, Tufts and Trinity. I was a three-sport athlete and a Deans list student with board scores over 1350. My chances were good, but my classmates were some of the brightest the school had ever seen, and it was their competition I was most worried about. But I've always swung for the fences. And this time would be no different.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">I heard from my cousin that Boston College had a "black talent" program where they sought out academically qualified Black students from all over the country — especially the greater Boston area. One of my cousins went to BC, so I paid him a visit. I immediately realized that the housing on campus was segregated — with all the black students living together in a dormitory on upper campus. But this was the same area where they housed all of the scholarship athletes. From my perspective, it was a segregated community of students that, in my opinion, didn't come to BC through the front door. They were there because of a unique capacity. Whether it was athletic ability. Or the color of their skin. And in some cases, it was both.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">I knew back then the world had a segregating system that could be based on your name, your skin color, where you came from and many other factors. But if I was to attend Boston College, I wanted it to be on my academic merit. This mattered to me, because my family had invested in making me the best I could be academically. And I knew I could get into BC on my own merit not because of my skin color. I was ranked in the top 10% of students academically across the country. Then and there I made the decision to not to tell Boston College that I was black when I applied. I needed to prove to myself and everyone else that I could get in regardless of my skin color.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">It was 1973 and all applications were handwritten and sent by mail. The BC application form had a section on personal demographics that included race, but it was optional, so instead of listing African American I listed "other" for my race. When they asked my religious preference, I chose other. I listed my name, Kevin John McCarthy, as male. I said I was born in Boston, raised in Cambridge, and that I attended Noble and Greenough School in Dedham—one of Boston's most prestigious secondary schools for boys. I did not mention that I am a Black man of Afro-Caribbean and Indigenous ethnicity.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">I'll never forget the day I opened that letter from BC. It said "Congratulations, you have been accepted to the Boston College Class of 1978." Later, I was also awarded a 100% academic scholarship.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">In the days before computers, you arrived on campus and they sent you to a big hall where you stood in line to review your information, your transcripts, your classes, etc. There I was, in line with all the freshmen that were arriving at BC in the fall of 1974, a young Black kid from Cambridge entering Boston College on his own merits. Ironically, it was the beginning of forced busing at Boston public schools.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">I know it was my (white sounding) name that swung the pendulum in my favor and allowed me to be the first student to attend Boston College from Nobles. And that was just the beginning of my journey when it comes to bias and stereotyping around my white sounding name. Seven years later, in 1981, I saw an ad for a new football coach at Wellesley High School. I called the number in the paper and spoke to the athletic director who requested that I fax him a resume. I had coached at Nobles for 5 years and my references were good, so about a week later Wellesley called me in for an interview.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">Per my directions, I went to the office of the Athletic Director. The door was open, I entered, saw no one and called out good morning. A middle-aged white gentleman popped out from behind the desk. Looked at me and pointed as he said, "Oh the Metco office — that's down at the end of the hall, turn right." And then he went back to whatever he was doing under the desk. I walked over to his desk, stuck out my hand, and said, "My name is Kevin McCarthy and I have an appointment with the athletic director for the football coaching job." I will never forget the look of consternation on his face as he stood from behind his desk, extended his hand, and said, "I am the athletic director, come right this way Coach McCarthy." I shook his hand and that was the beginning of what turned out to be one of the best professional relationships of my life, but I don't know that I can say I would've gotten there if it weren't for my white sounding name.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">Years later, that man would give an emotional speech where he admitted, assuming I was white, and admitted the surprise he had felt upon actually meeting me. But more importantly, he told the story to impart a vital lesson about bias and the ways it can impact you both positively and negatively.</p>
+        
+        <p style="margin-bottom:24px; font-size:15px; text-align:left;">That coaching career at Wellesley gave me the opportunity to provide support and mentorship to young Black men. I believe it is not an exaggeration to say that one of the main reasons they went on to be successful — some going on to become coaches, others working in education leadership — is because they were able to see themselves reflected in positions of leadership around them. That's why this matters.</p>
+      </div>
+  
+      <div style="text-align:center; margin-top:30px;">
+        <button onclick="closeKevinStory()" style="background:#CE5CEA; color:white; border:none; border-radius:20px; padding:10px 25px; cursor:pointer; font-size:14px;">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="names.js"></script>
+  <script src="intro-sequence.js"></script>
+  <script src="quiz.js"></script>
+  
+  <!-- Kevin Story Close Function -->
+  <script>
+    function closeKevinStory() {
+      const popup = document.getElementById('kevin-story-container');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
